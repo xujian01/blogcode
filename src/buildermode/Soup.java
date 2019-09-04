@@ -6,8 +6,17 @@ package buildermode;
  *  @Description:
  */
 public class Soup {
+    /**
+     * 材料1
+     */
     private String cailiao1;
+    /**
+     * 材料2
+     */
     private String cailiao2;
+    /**
+     * 材料3
+     */
     private String cailiao3;
 
     public String getCailiao1() {
