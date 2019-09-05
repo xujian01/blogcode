@@ -1,0 +1,28 @@
+package decoratormode.extentimpl;
+/**
+ * 装备了法师权杖的法师玩家
+ *  @author: xujian
+ *  @Date: 2019-09-05
+ *  @Description:
+ */
+public class TruncheonMasterGamer extends MasterGamer{
+    /**
+     * 获取目前的装备
+     *
+     * @return
+     */
+    @Override
+    public String getEquip() {
+        return super.getEquip()+",法师权杖";
+    }
+
+    /**
+     * 获取目前身上装备的价格
+     *
+     * @return
+     */
+    @Override
+    public int getPrice() {
+        return super.getPrice()+50;
+    }
+}
