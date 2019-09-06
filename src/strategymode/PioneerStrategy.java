@@ -7,7 +7,7 @@ package strategymode;
  */
 public class PioneerStrategy implements Strategy {
     /**
-     * 策略处理类
+     * 策略处理方法
      *
      */
     @Override
