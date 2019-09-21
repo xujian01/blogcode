@@ -1,6 +1,12 @@
 package observermode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SubjectImpl implements Subject {
+
+    private List<Observer> observerList = new ArrayList<>();
+    private String status;
 
     @Override
     public void registerObserver(Observer observer) {
@@ -15,13 +21,15 @@ public class SubjectImpl implements Subject {
     @Override
     public void notifyAllObserver() {
         for (Observer observer : observerList) {
-            observer.process();
+            observer.process(status);
         }
     }
 
-    @Override
-    public void notifyOneObserver(int index) {
-        Observer observer = observerList.get(index);
-        observer.process();
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

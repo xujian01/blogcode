@@ -6,5 +6,5 @@ package observermode;
  *  @Description:
  */
 public interface Observer {
-    void process();
+    void process(String status);
 }
