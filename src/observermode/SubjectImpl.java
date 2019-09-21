@@ -1,10 +1,6 @@
 package observermode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SubjectImpl implements Subject {
-    List<Observer> observerList = new ArrayList<>();
 
     @Override
     public void registerObserver(Observer observer) {
