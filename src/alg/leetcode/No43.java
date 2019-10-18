@@ -14,19 +14,14 @@ public class No43 {
      */
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;
-        ListNode cur = head;
-        while (head!=null) {
-            if (head.next==null) {
-                cur.next = prev;
-                break;
-            } else {
-                head = head.next;
-                cur.next = prev;
-                prev = cur;
-                cur = head;
-            }
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode nextTemp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
         }
-        return head;
+        return prev;
     }
     public static void main(String[] args) {
         ListNode head = new No43.ListNode(1);
