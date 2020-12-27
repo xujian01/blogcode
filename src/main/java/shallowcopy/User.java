@@ -8,6 +8,9 @@ public class User implements Cloneable {
     private int age;
     private Address addr;
 
+    public User(){
+
+    }
     public User(int age, Address addr) {
         this.age = age;
         this.addr = addr;

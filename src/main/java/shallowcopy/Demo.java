@@ -18,4 +18,10 @@ public class Demo {
         System.out.println(userCopy);
         System.out.println(userA.getAddr() == userCopy.getAddr());
     }
+    public static User copyBySetter(User source){
+        User user = new User();
+        user.setAge(source.getAge());
+        user.setAddr(source.getAddr());
+        return user;
+    }
 }
