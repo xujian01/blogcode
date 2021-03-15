@@ -1,0 +1,21 @@
+需要引入maven插件来方便打jar包
+<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <archive>
+            <!-- 打jar的文件清单，对应META-INF/MANIFEST.MF文件 -->
+            <manifestEntries>
+              <!-- 主程序启动类 -->
+              <Agent-Class>
+                org.example.MyBizAgentMain
+              </Agent-Class>
+              <!-- 允许重新定义类 -->
+              <Can-Redefine-Classes>true</Can-Redefine-Classes>
+              <!-- 允许转换并重新加载类 -->
+              <Can-Retransform-Classes>true</Can-Retransform-Classes>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
